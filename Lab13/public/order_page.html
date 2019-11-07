@@ -16,23 +16,13 @@
             return returnErrors ? errors : (errors.length == 0);
         }
 
-        function displayPurchase() {
-            if (isNonNegInt(GET['quantity_textbox'])) {
-                document.write(`Thanks for ordering ${GET['quantity_textbox']} things!`);
-            } else {
-                alert('Please enter a valid quantity')
-            }
-        }
-        // get the query string values from form post
-        let params = (new URL(document.location)).searchParams;
+
+        // get the query string values from form submission
+        let params = (new URL(document.location)).searchParams; //code gets query string from url of page.
         GET = {};
         params.forEach(function(value, key) {
             GET[key] = value
         });
-        if (typeof GET['quantity_textbox'] != 'undefined') {
-            displayPurchase();
-            window.stop();
-        }
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,7 +31,7 @@
 </head>
 
 <body>
-    <form name="quantity_form" action="http://localhost:8080/process_form" method="POST">
+    <form name="quantity_form" action="/process_form" method="POST">
         <label for="quantity_textbox">quantity desired:</label>
         <input type="text" name="quantity_textbox" onkeyup="checkQuantityTextbox();">
         <span id='qty_textbox_message'>Enter a quantity</span>
