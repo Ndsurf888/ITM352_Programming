@@ -7,6 +7,7 @@
             errs_array = isNonNegInt(quantity_textbox.value, true);
             qty_textbox_message.innerHTML = errs_array.join(',');
         }
+
         function isNonNegInt(q, returnErrors = false) {
             errors = []; // assume no errors at first
             if (Number(q) != q) errors.push('Not a number!'); // Check if string is a number value
@@ -14,6 +15,7 @@
             if (parseInt(q) != q) errors.push('Not an integer!'); // Check that it is an integer
             return returnErrors ? errors : (errors.length == 0);
         }
+
         function displayPurchase() {
             if (isNonNegInt(GET['quantity_textbox'])) {
                 document.write(`Thanks for ordering ${GET['quantity_textbox']} things!`);
@@ -24,7 +26,9 @@
         // get the query string values from form post
         let params = (new URL(document.location)).searchParams;
         GET = {};
-        params.forEach(function (value, key) { GET[key] = value });
+        params.forEach(function(value, key) {
+            GET[key] = value
+        });
         if (typeof GET['quantity_textbox'] != 'undefined') {
             displayPurchase();
             window.stop();
@@ -37,7 +41,7 @@
 </head>
 
 <body>
-    <form name="quantity_form" action="process_form" method="POST">
+    <form name="quantity_form" action="http://localhost:8080/process_form" method="POST">
         <label for="quantity_textbox">quantity desired:</label>
         <input type="text" name="quantity_textbox" onkeyup="checkQuantityTextbox();">
         <span id='qty_textbox_message'>Enter a quantity</span>

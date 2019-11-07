@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>hello from NOAH</h1>
+    <h1>Hello from NOAH</h1>
 </body>
 </html>
