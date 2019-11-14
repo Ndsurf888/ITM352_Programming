@@ -1,4 +1,4 @@
-var watchData = [{
+var products = [{
         "image": "rolex.jpg",
         "price": 15000,
         "name": "rolex"
@@ -29,3 +29,7 @@ var watchData = [{
         "name": "Lige"
     }
 ];
+
+if (typeof module != 'undefined') {
+    module.exports = products;
+}
