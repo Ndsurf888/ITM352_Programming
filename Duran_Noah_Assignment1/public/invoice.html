@@ -12,7 +12,7 @@
     } else {
         document.write('no form submitted');
     }
-    console.log(quantities);
+    console.log(quantities); //scans for quantities
 </script>
 
 <head>
@@ -53,10 +53,10 @@
         `);
                     }
                 }
-                // Compute tax 
+                // Compute the tax 
                 var tax_rate = 0.0575
                 var tax = subtotal * tax_rate;
-                // Compute shipping
+                // Compute the shipping
                 if (subtotal >= 100) {
                     var shipping = 0.05 * subtotal
                 } else if (subtotal >= 50) {
@@ -64,9 +64,9 @@
                 } else if (subtotal < 50) {
                     var shipping = 2
                 }
-                // Compute grand total 
+                // calculate  total 
                 var grandtotal = subtotal + tax + shipping;
-                // Sources: Invoice WOD, Assignment 1 example
+                // Sources: Invoice WOD, Assignment 1.
             </script>
             <tr>
                 <td colspan="4" width="100%">&nbsp;</td>
