@@ -21,7 +21,7 @@
         }
 
         function checkQuantityTextbox(theTextbox) {
-            errs = isNonNegInt(theTextbox.value, true);
+            errs = isNonNegInt(theTextbox.value, true); //checks for the quantity and will serve what is in json.
             if (errs.length == 0) errs = ['Quantity:'];
             if (theTextbox.value.trim() == '') errs = ['Quantity:'];
             document.getElementById(theTextbox.name + '_label').innerHTML = errs.join(", ");
