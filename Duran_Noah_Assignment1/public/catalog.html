@@ -44,10 +44,10 @@
                         }
                     }
                 }
-                // Now respond to errors if ok
+                // respond to errors if ok
                 if (has_errors) {
                     alert("Please enter only valid quantities!");
-                } else if (total_qty == 0) { // just give a general alert
+                } else if (total_qty == 0) { //  general alert
                     alert("Please select quantities!");
                 } else { // Perfect it works!
                     window.location = `./invoice.html${document.location.search}`;
