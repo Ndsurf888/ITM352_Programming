@@ -2,7 +2,7 @@
 <script>
     let params = (new URL(document.location)).searchParams;
     var quantities = [];
-    if (params.has('purchase_submit')) {
+    if (params.has('purchase_submit')) { //this is a loop that will being up information from product.json to populate invoice.
         for (i = 0; i < products.length; i++) {
             if (params.has(`quantity${i}`)) {
                 a_qty = params.get(`quantity${i}`);
@@ -118,9 +118,11 @@
     </table>
     <footer>
         <h1>
-            Have a bright day!
+            Have a great day!
         </h1>
     </footer>
+
 </body>
+
 
 </html>
