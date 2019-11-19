@@ -1,6 +1,6 @@
 a:link,
 a:visited {
-    background-color: #0388fc;
+    background-color: #a53636;
     color: rgb(255, 255, 255);
     padding: 14px 25px;
     text-align: center;
@@ -18,11 +18,11 @@ h1 {
 }
 
 table {
-    background-color: ivory;
+    background-color: blanchedalmond;
     margin-left: auto;
     margin-right: auto;
 }
 
 body {
-    background-color: blanchedalmond;
+    background-color: rgb(231, 231, 216);
 }
